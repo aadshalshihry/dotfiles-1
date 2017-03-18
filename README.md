@@ -12,6 +12,10 @@ git clone https://github.com/Remchi/dotfiles.git .dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
+* Add .rbenv [https://codeyarns.com/2015/02/12/how-to-install-rbenv/]
+```
+```
+
 * create symbolic links to config files
 
 ```
