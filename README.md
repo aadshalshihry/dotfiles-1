@@ -14,6 +14,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 * Add .rbenv [https://codeyarns.com/2015/02/12/how-to-install-rbenv/]
 ```
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 ```
 
 * create symbolic links to config files
