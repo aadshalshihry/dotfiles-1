@@ -4,7 +4,7 @@
 
 ```
 cd ~
-git clone https://github.com/Remchi/dotfiles.git .dotfiles
+https://github.com/aadshalshihry/dotfiles-1.git
 ```
 
 * Add Vundlevim to .vim
