@@ -169,6 +169,7 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 
 " create/open file in current folder
 map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>et :vsplit=escape(expand("%:p:h"),' ') . '/'<CR>
 
 nnoremap <silent> <space> :nohl<Bar>:echo<CR>
 nnoremap <leader>w mzyyp`zj
@@ -368,7 +369,12 @@ endfun
 " let @l=':%s/’/''/g'
 " let @j=':%s/—/-/g'
 
-let @n='y:newi```pkdd:set ft=markdowngg[ Ajs'
-let @e='ggVG: w! >> ~/Dropbox/Content/notes.md:bd!'
+let @n='y:new
+i```
+pkdd:set ft=markdown
+gg[ Ajs'
+let @e='ggVG: w! >> ~/Dropbox/Content/notes.md
+:bd!
+'
 nnoremap <leader>en :new +set\ ft=markdown<cr>o
 
