@@ -28,3 +28,11 @@ ln -s .dotfiles/gemrc .gemrc
 ln -s .dotfiles/emacs .emacs.d
 ```
 
+* Remap Caps_Lock to Crtl & Esc (Only for Linux)
+```
+setxkbmap -option 'caps:ctrl_modifier'
+# xcape -e 'Caps_Lock=Escape'
+xmodmap -e 'keycode 66=Escape'
+```
+
+
