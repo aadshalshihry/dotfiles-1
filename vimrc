@@ -369,7 +369,14 @@ endfun
 " let @l=':%s/’/''/g'
 " let @j=':%s/—/-/g'
 
-let @n='y:newi```pkdd:set ft=markdowngg[ Ajs'
-let @e='ggVG: w! >> ~/Dropbox/Content/notes.md:bd!'
+
+" let @n='y:new
+" i```
+" pkdd:set ft=markdown
+" gg[ Ajs'
+" let @e='ggVG: w! >> ~/Dropbox/Content/notes.md
+" :bd!
+" '
+
 nnoremap <leader>en :new +set\ ft=markdown<cr>o
 
