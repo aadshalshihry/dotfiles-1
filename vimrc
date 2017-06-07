@@ -87,7 +87,7 @@ set showmatch
 set nowrap
 set autoread
 set autowrite
-set backupdir=~/.tmp
+" set backupdir=~/.tmp
 set directory=~/.tmp
 set viminfo+=!
 set guioptions-=T
@@ -169,6 +169,7 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 
 " create/open file in current folder
 map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>et :vsplit=escape(expand("%:p:h"),' ') . '/'<CR>
 
 nnoremap <silent> <space> :nohl<Bar>:echo<CR>
 nnoremap <leader>w mzyyp`zj
