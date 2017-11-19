@@ -161,6 +161,9 @@ imap <c-e> <esc>A
 " Quick open most used files
 nnoremap <leader>em :!open -a 'Marked 2.app' '%:p'<cr>
 nnoremap <leader>ev :tabnew ~/.vimrc<cr>
+nnoremap <leader>et :tabnew<cr>
+nnoremap <leader>es :split<cr>:UltiSnipsEdit<cr>
+nnoremap <leader>ew :vsplit<cr> 
 nnoremap <leader>es :split<cr>:UltiSnipsEdit<cr>
 nnoremap <leader>eN :split<cr>:e ~/Dropbox/Content/notes.md<cr>
 
