@@ -34,7 +34,7 @@
 	excludesfile = /Users/rem/.gitignore_global
 	autocrlf = input
 [credential]
-	helper = osxkeychain
+	helper = cache --timeout=3600
 [push]
 	default = simple
 [difftool "sourcetree"]

@@ -9,26 +9,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-eunuch'
+" Plugin 'tpope/vim-endwise' " <= ruby
+Plugin 'tpope/vim-eunuch' " <= Unix command inside vim
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-fugitive' " <= Git
+Plugin 'xuyuanp/nerdtree-git-plugin'
+" Plugin 'tpope/vim-rails' <= ruby
+Plugin 'tpope/vim-unimpaired' " back to this plugin
 Plugin 'tpope/vim-abolish'
-Plugin 'vim-ruby/vim-ruby'
+" Plugin 'vim-ruby/vim-ruby' ruby
 Plugin 'mattn/emmet-vim'
 
-Plugin 'rbgrouleff/bclose.vim'
+Plugin 'rbgrouleff/bclose.vim' " get back to it
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'cohama/lexima.vim'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion' " get back to it
 
-Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips' " snippete
 Plugin 'janko-m/vim-test'
 
 Plugin 'kchmck/vim-coffee-script'
@@ -59,7 +60,7 @@ Plugin 'tpope/vim-obsession'
 Plugin 'othree/html5.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'flowtype/vim-flow'
-Plugin 'andreypopp/vim-flow-outline'
+" Plugin 'andreypopp/vim-flow-outline'
 
 " Colour Themes
 Plugin 'joshdick/onedark.vim'
@@ -108,7 +109,7 @@ set incsearch
 set ignorecase
 set smartcase
 set mouse=a
-set shell=bash
+set shell=zsh
 set clipboard=unnamed
 set winwidth=100
 set winheight=5
@@ -163,7 +164,7 @@ nnoremap <leader>em :!open -a 'Marked 2.app' '%:p'<cr>
 nnoremap <leader>ev :tabnew ~/.vimrc<cr>
 nnoremap <leader>et :tabnew<cr>
 nnoremap <leader>es :split<cr>:UltiSnipsEdit<cr>
-nnoremap <leader>ew :vsplit<cr> 
+nnoremap <leader>ew :vsplit<cr>
 nnoremap <leader>es :split<cr>:UltiSnipsEdit<cr>
 nnoremap <leader>eN :split<cr>:e ~/Dropbox/Content/notes.md<cr>
 
@@ -347,39 +348,13 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-" set langmap=йцукенгшщзхъфывапролджэячсмитьбю;qwfpgjluy\\;[]arstdhneio'zxcvbkm\\,.
 
-" abbrevs for Star Wars
-" iabbrev dgre &#246;
-" iabbrev dred &#243;
-" iabbrev dpur &#245;
-" iabbrev dyel &#244;
-" iabbrev dfor &#247;
-" iabbrev dbla &#241;
-" iabbrev dblu &#242;
-"
-" iabbrev dlig &#248;
-" iabbrev ddar &#249;
-" iabbrev ddes &#250;
-" iabbrev dadv &#251;
-" iabbrev dfai &#253;
-" iabbrev dsuc &#255;
-" iabbrev dthr &#252;
-" iabbrev dtri &#254;
-"
 " let @y=':%s/“/"/g'
 " let @u=':%s/”/"/g'
 " let @l=':%s/’/''/g'
 " let @j=':%s/—/-/g'
 
 
-" let @n='y:new
-" i```
-" pkdd:set ft=markdown
-" gg[ Ajs'
-" let @e='ggVG: w! >> ~/Dropbox/Content/notes.md
-" :bd!
-" '
 
 nnoremap <leader>en :new +set\ ft=markdown<cr>o
 
