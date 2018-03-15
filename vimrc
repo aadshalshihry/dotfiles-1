@@ -33,7 +33,6 @@ Plugin 'mxw/vim-jsx'
 Plugin 'w0rp/ale'
 " prettier
 Plugin 'skywind3000/asyncrun.vim'
-	
 
 
 " Colour Themes
@@ -86,7 +85,6 @@ set smartcase
 set mouse=a
 set shell=zsh
 set clipboard=unnamed
-" se clipboard=unnamedplus
 set winwidth=100
 set winheight=5
 set winminheight=5
@@ -98,33 +96,47 @@ set noesckeys
 set ttimeout
 set ttimeoutlen=1
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
-set complete=.,w,b,u,i 
+set list
+set complete=.,w,b,u,i
 set path+=**
 
 " =============================================================
 "                      MAPPINGS
 " =============================================================
 let mapleader = ","
+nnoremap ; :
 
+" move btn windows
+map <leader>h :wincmd h<CR>
+map <leader>j :wincmd j<CR>
+map <leader>k :wincmd k<CR>
+map <leader>l :wincmd l<CR>
+
+" Exit for insert or visual mode
 inoremap <c-t> <ESC>
 vnoremap <c-t> <ESC>
 
+" short cut for most common files
+nnoremap <leader>ev :tabnew ~/.vimrc<cr>
+
+" short cut for dealing with files, tabs and buf.
+nnoremap <leader>et :tabnew<cr>
+nnoremap <leader>es :vsplit<cr>
+
+" toggol important submode
+nnoremap <leader>v :set paste!<CR>
+nnoremap <leader>s :set spell!<CR>
 map <C-n> :NERDTreeToggle<CR>
 
-
-nnoremap <leader>ev :tabnew ~/.vimrc<cr>
-nnoremap <leader>et :tabnew<cr>
-nnoremap <leader>v :set invpaste paste?<CR>
-
+" Git
 nnoremap <leader>z :Gstatus<CR><C-w>20+
 
+" move btn tabs
 nnoremap <leader>1 1gt<cr>
 nnoremap <leader>2 2gt<cr>
 nnoremap <leader>3 3gt<cr>
 nnoremap <leader>4 4gt<cr>
 nnoremap <leader>5 5gt<cr>
-
-
 
 " CtrlP
 nnoremap <leader>f :CtrlP<cr>
@@ -133,6 +145,7 @@ nnoremap <leader>p :CtrlPClearCache<cr>
 
 " toggle heightlight   
 nnoremap <leader><Esc> :set hlsearch!<CR>
+
  " =============================================================
 "                 PLUGINS CONFIGURATION
 " =============================================================
@@ -145,7 +158,7 @@ let g:airline_powerline_fonts = 2
 " let g:airline_theme='papercolor'
 
 " emmet => Note to add , after the keymap
-" let g:user_emmet_leader_key='<c-y>'
+let g:user_emmet_leader_key='<c-y>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
@@ -211,7 +224,7 @@ let &t_AF="\e[38;5;%dm"
 " let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-colorscheme cobalt2
+colorscheme atom-dark-256
 set background=dark
 
 if has("gui_running")

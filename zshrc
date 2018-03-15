@@ -107,3 +107,4 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias gs="git status"
 alias gac="git add . && git commit"
 
+
