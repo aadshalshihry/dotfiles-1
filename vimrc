@@ -111,6 +111,15 @@ map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Buffer ShortCut
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
 
 " Exit for insert or visual mode
 inoremap <c-t> <ESC>
@@ -242,4 +251,12 @@ endif
 "     silent execute 'bwipeout' buf
 "   endfor
 " endfunction
+
+" =============================================================
+"                      Arabic Setting
+" =============================================================
+
+set encoding=utf-8
+set arabicshape
+
 
