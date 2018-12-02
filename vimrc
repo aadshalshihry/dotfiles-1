@@ -5,47 +5,49 @@
 
 set nocompatible
 filetype off
+call plug#begin('~/.dotfiles/vim/plugged')
 
-set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'SirVer/ultisnips' 
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'sirver/ultisnips' 
+
+Plug 'StanAngeloff/php.vim'
+
 
 " emmet
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', {'for': ['html','html.handlebars']}
 " handlebars
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 
 " ------------------------------
 " Js (React)
 " -----------------------------
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 " eslint
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 " prettier
-Plugin 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 
 
 " Colour Themes
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'joshdick/onedark.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'GertjanReynaert/cobalt2-vim-theme'
-Plugin 'trevordmiller/nova-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'GertjanReynaert/cobalt2-vim-theme'
+Plug 'trevordmiller/nova-vim'
 
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 syntax on
 
@@ -70,9 +72,9 @@ set laststatus=2
 set scrolloff=3
 set sidescrolloff=4
 set hidden
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set relativenumber
 set number
@@ -97,7 +99,7 @@ set ttimeout
 set ttimeoutlen=1
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
 set list
-set complete=.,w,b,u,i
+set complete=.,w,b,u,t,i,kspell
 set path+=**
 
 " =============================================================
@@ -129,12 +131,15 @@ vnoremap <c-t> <ESC>
 nnoremap <leader>ev :tabnew ~/.vimrc<cr>
 
 " short cut for dealing with files, tabs and buf.
-nnoremap <leader>et :tabnew<cr>
+" nnoremap <leader>et :tabnew<cr>
+nnoremap <leader>et :vert sb <SPACE>
 nnoremap <leader>es :vsplit<cr>
 
 " toggol important submode
 nnoremap <leader>v :set paste!<CR>
 nnoremap <leader>s :set spell!<CR>
+
+" NERDTreeToggle
 map <C-n> :NERDTreeToggle<CR>
 
 " Git
@@ -168,11 +173,11 @@ let g:airline_powerline_fonts = 2
 
 " emmet => Note to add , after the keymap
 let g:user_emmet_leader_key='<c-y>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
+" let g:user_emmet_settings = {
+"  \  'javascript.jsx' : {
+"    \      'extends' : 'jsx',
+"    \  },
+"  \}
 
 " esLinter
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
@@ -181,6 +186,15 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
 " handlebars 
 let g:mustache_abbreviations = 1
+
+" NERDTree
+nnoremap <leader>q :NERDTreeToggle<cr>
+let NERDTreeMinimalUI=1
+let NERDTreeShowLineNumbers=1
+
+" CtrlP plugin
+let g:ctrlp_working_path_mode='a'
+set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
 
 " =============================================================
 "                    AUTOCOMMANDS
@@ -206,17 +220,6 @@ if has("autocmd")
     au BufNewFile,BufReadPost *.md set filetype=markdown
   augroup END
 endif
-
-
-
-" NERDTree
-nnoremap <leader>q :NERDTreeToggle<cr>
-let NERDTreeMinimalUI=1
-let NERDTreeShowLineNumbers=1
-
-" CtrlP plugin
-let g:ctrlp_working_path_mode='a'
-set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
 
 
 " =============================================================
