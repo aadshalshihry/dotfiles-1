@@ -28,6 +28,11 @@ ln -s .dotfiles/gemrc .gemrc
 ln -s .dotfiles/emacs .emacs.d
 ```
 
+* Before Vim Plug Install
+```
+rm -rf ~/.dotfiles/vim/plugged
+```
+
 * Remap Caps_Lock to Crtl & Esc (Only for Linux)
 ```
 setxkbmap -option 'caps:ctrl_modifier'
