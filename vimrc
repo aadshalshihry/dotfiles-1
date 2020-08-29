@@ -5,7 +5,7 @@
 
 set nocompatible
 filetype off
-call plug#begin('~/.dotfiles/vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'VundleVim/Vundle.vim'
 
